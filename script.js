@@ -127,12 +127,12 @@
                 },
             });
             new Chart(document.getElementById("otro"), {
-    type: "pie", // Define el tipo de gráfico aquí (puedes cambiarlo a 'doughnut')
+    type: "pie",
     data: {
         labels: ['7 años', '6 años', '5 años', '4 años', '3 años'],
         datasets: [{
             label: 'Distribución por Acreditación',
-            data: [473, 1158, 571, 305, 210],
+            data: [473 vacantes , 1158 vacantes , 571 vacantes , 305 vacantes , 210 vacantes],
             backgroundColor: [
                 'rgb(0, 9, 132)',
                 'rgb(54, 162, 235)',
@@ -153,8 +153,7 @@
                 bodyColor: "#555",
                 padding: 10,
                 callbacks: {
-                    label: function(context) {
-                        // Lista ordenada que coincide exactamente con los años del label principal
+                    label: function(context) { 
                         const universidades = [
                             'PUC - UCHILE – USACH – PUCV',
                             'UDD – UDP – UNAB – UV – UTalca',
@@ -165,7 +164,7 @@
                         
                         const label = context.label || '';
                         const value = context.raw || 0;
-                        const listaUes = universidades[context.dataIndex]; // Obtiene la lista según el sector
+                        const listaUes = universidades[context.dataIndex]; 
                         
                         return [
                             `${label}: ${value}`,
