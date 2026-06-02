@@ -134,11 +134,11 @@
             label: 'Distribución por Acreditación',
             data: [473 , 1158 , 571 , 305 , 210],
             backgroundColor: [
-                'rgb(0, 9, 132)',
-                'rgb(54, 162, 235)',
-                'rgb(255, 25, 86)',
-                'rgb(255, 99, 12)',
-                'rgb(0, 255, 0)',
+                'rgb(143, 0, 0)',
+                'rgb(128, 3, 3)',
+                'rgb(173, 80, 3)',
+                'rgb(214, 104, 13)',
+                'rgb(214, 170, 13)',
             ],
             hoverOffset: 4
         }]
