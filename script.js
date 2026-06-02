@@ -136,7 +136,7 @@
     '3 años',
       ],
   datasets: [{
-    label: 'My First Dataset',
+    label: 'PUC - UCHILE – USACH– PUCV ',  'UDD – UDP – UNAB – UV – UTalca ',  ' UFT – UBB – UCT – UACh – UBO – UMayor – UTA – UA – ULS ',  'UTEM – UGM – UPLA – UVM ',  'UNIACC ',
     data: [473,1158, 571, 305, 210 ],
     backgroundColor: [
       'rgb(0, 9, 132)',
