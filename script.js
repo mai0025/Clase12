@@ -132,7 +132,7 @@
         labels: ['7 años', '6 años', '5 años', '4 años', '3 años'],
         datasets: [{
             label: 'Distribución por Acreditación',
-            data: [473 vacantes , 1158 vacantes , 571 vacantes , 305 vacantes , 210 vacantes],
+            data: [473 , 1158 , 571 , 305 , 210],
             backgroundColor: [
                 'rgb(0, 9, 132)',
                 'rgb(54, 162, 235)',
