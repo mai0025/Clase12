@@ -126,25 +126,54 @@
                     },
                 },
             });
-               new Chart(document.getElementById("otro"),
-               const data = {
-  labels: [
-    '7 años',
-    '6 años',
-    '5 años',
-    '4 años',
-    '3 años',
-      ],
-  datasets: [{
-    label: 'PUC - UCHILE – USACH– PUCV ',  'UDD – UDP – UNAB – UV – UTalca ',  ' UFT – UBB – UCT – UACh – UBO – UMayor – UTA – UA – ULS ',  'UTEM – UGM – UPLA – UVM ',  'UNIACC ',
-    data: [473,1158, 571, 305, 210 ],
-    backgroundColor: [
-      'rgb(0, 9, 132)',
-      'rgb(54, 162, 235)',
-      'rgb(255, 25, 86)',
-       'rgb(255, 99, 12)',
-      'rgb(0, 255, 0)',
-    ],
-    hoverOffset: 4
-  }]
-};
+            new Chart(document.getElementById("otro"), {
+    type: "pie", // Define el tipo de gráfico aquí (puedes cambiarlo a 'doughnut')
+    data: {
+        labels: ['7 años', '6 años', '5 años', '4 años', '3 años'],
+        datasets: [{
+            label: 'Distribución por Acreditación',
+            data: [473, 1158, 571, 305, 210],
+            backgroundColor: [
+                'rgb(0, 9, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 25, 86)',
+                'rgb(255, 99, 12)',
+                'rgb(0, 255, 0)',
+            ],
+            hoverOffset: 4
+        }]
+    },
+    options: {
+        plugins: {
+            tooltip: {
+                backgroundColor: "#fff",
+                borderColor: "#ddd",
+                borderWidth: 1,
+                titleColor: "#111",
+                bodyColor: "#555",
+                padding: 10,
+                callbacks: {
+                    label: function(context) {
+                        // Lista ordenada que coincide exactamente con los años del label principal
+                        const universidades = [
+                            'PUC - UCHILE – USACH – PUCV',
+                            'UDD – UDP – UNAB – UV – UTalca',
+                            'UFT – UBB – UCT – UACh – UBO – UMayor – UTA – UA – ULS',
+                            'UTEM – UGM – UPLA – UVM',
+                            'UNIACC'
+                        ];
+                        
+                        const label = context.label || '';
+                        const value = context.raw || 0;
+                        const listaUes = universidades[context.dataIndex]; // Obtiene la lista según el sector
+                        
+                        return [
+                            `${label}: ${value}`,
+                            `Ues: ${listaUes}`
+                        ];
+                    }
+                }
+            }
+        }
+    }
+});
